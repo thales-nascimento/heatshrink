@@ -135,7 +135,7 @@ void heatshrink_encoder_reset(heatshrink_encoder *hse) {
 }
 
 HSE_sink_res heatshrink_encoder_sink(heatshrink_encoder *hse,
-        uint8_t *in_buf, size_t size, size_t *input_size) {
+        const uint8_t *in_buf, size_t size, size_t *input_size) {
     if ((hse == NULL) || (in_buf == NULL) || (input_size == NULL)) {
         return HSER_SINK_ERROR_NULL;
     }
